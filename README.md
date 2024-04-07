@@ -12,3 +12,5 @@ After cloning the project, to contribute to it:
 To update local main branch when update were made:
 1. Go back to main `git checkout main`.
 2. Refresh `git pull origin HEAD`.
+
+Hello team
