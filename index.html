@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesfooter.css" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
     <script src="script.js" defer></script>
     <title>Wild eats</title>
   </head>
@@ -28,34 +31,42 @@
 
   <body>
     <main></main>
-  </body>
 
-  <footer>
-    <form action="./" method="get">
-      <section id="newsletter">
-        <h4>Newsletter</h4>
+    <footer>
+      <section id="newsletter-form">
+        <h4>Inscription à la newsletter</h4>
+        <form action="./" method="post">
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            required
+            placeholder="*Adresse e-mail"
+          />
+          <button id="submit-button" type="submit">S'inscrire</button>
+        </form>
+      </section>
+
+      <section id="social-network-logos">
+        <h4>Suivez-nous!</h4>
         <ul>
           <li>
-            <label for="user-email">Your E-mail Address</label>
-            <input type="email" name="user-email" id="user-email" required />
+            <a href="https://www.facebook.com">
+              <i class="lni lni-facebook-fill" alt="facebook icon" aria-label="facebook icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com">
+              <i class="lni lni-instagram" alt="instagram icon" aria-label="instagram icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com"> 
+              <i class="lni lni-tiktok-alt" alt="tiktok icon" aria-label="tiktok icon"></i>
+            </a>
           </li>
         </ul>
       </section>
-
-      <section class="Subscribe now">
-        <button id="submit-button" class="btn" type="submit">
-          Subscribe now
-        </button>
-      </section>
-    </form>
-
-    <ul id="logo-social-network">
-            <li>
-                <a href="https://www.instagram.com"><img src="images/icons/insta.png" alt="Instagram logo"></a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com"><img src="images/icons/facebook.png" alt="Facebook logo"></a>
-            </li>
-        </ul>
-  </footer>
+    </footer>
+  </body>
 </html>
