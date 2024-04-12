@@ -3,32 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesfooter.css" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
     <script src="script.js" defer></script>
     <title>Wild eats</title>
   </head>
-
   
   <body>
     <!-- Partie Joe Header -->
-  <header>
-    <div class="hero"></div>
-    <h1>Wild Eats</h1>
-    <nav>
-      <ul>
-        <label for="city-names">Sélectionner une ville :</label>
-        <select name="city-names" id="city-names">
-          <option value="epinal">Epinal</option>
-          <option value="lyon">Lyon</option>
-          <option value="nantes">Nantes</option>
-        </select>
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Agenda</a></li>
-        <li><a href="#">A propos</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <div class="hero">
+        <h1 class="title_header">WILD EATS</h1>
+        <nav class="navigation">
+          <ul>
+            <label for="city-names">Sélectionner une ville :</label>
+            <select name="city-names" id="city-names">
+              <option value="epinal"><a href="#epinal">Epinal</a></option>
+              <option value="lyon"><a href="#lyon">Lyon</a></option>
+              <option value="nantes"><a href="#nantes">Nantes</a></option>
+            </select>
+            <li><a href="#actualites">Actualités</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#a propos">A propos</a></li>
+          </ul>
+        </nav>
+        <nav id="myburger-nav" class="burger-nav">
+          <p class="burger-button">|||</p>
+          <ul class="burger-menu">
+            <li>
+              <details class="cities-menu">
+                <summary>Les Villes</summary>
+                <a href="#epinal">Epinal</a>
+                <a href="#lyon">Lyon</a>
+                <a href="#nantes">Nantes</a>
+              </details>
+            </li>
+            <li><a href="#actualites">Actualités</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#a propos">A propos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
 
+    
     <section id="villes">
       <ul>
         <li>
@@ -93,12 +126,55 @@
         </div>
       </div>
     </section>
+  </main>
+  <footer>
+    <section id="newsletter-form">
+      <h4>Inscription à la newsletter</h4>
+      <form action="./" method="post">
+        <input
+          type="email"
+          name="user-email"
+          id="user-email"
+          required
+          placeholder="*Adresse e-mail"
+        />
+        <button id="submit-button" type="submit">S'inscrire</button>
+      </form>
+    </section>
 
-
+    <section id="social-network-logos">
+      <h4>Suivez-nous!</h4>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com">
+            <i
+              class="lni lni-facebook-fill"
+              alt="facebook icon"
+              aria-label="facebook icon"
+            ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com">
+            <i
+              class="lni lni-instagram"
+              alt="instagram icon"
+              aria-label="instagram icon"
+            ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com">
+            <i
+              class="lni lni-tiktok-alt"
+              alt="tiktok icon"
+              aria-label="tiktok icon"
+            ></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
 </body>
-
-  
-<footer></footer>
-
 
 </html>

@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "rubik", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "concert one", sans-serif;
 }
 
 
@@ -9,6 +16,119 @@ img{
   width: 60%;
   padding: auto;
 }
+.hero {
+  background-image: url(img/hero.jpg);
+  background-position: center;
+  height: 20rem;
+  background-size: cover;
+  padding-top: 0.4rem;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    font-weight: 900;
+    margin: 2rem;
+    font-family: concert one;
+    padding-top: 4rem;
+  }
+
+  h2 {
+    font-family: concert one;
+    color: white;
+  }
+}
+
+.navigation {
+  ul {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    font-family: rubik;
+
+    label {
+      color: white;
+    }
+
+    select {
+      background-color: #cbaf6a;
+      border-radius: 4px;
+      color: white;
+    }
+  }
+
+  li {
+    display: flex;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.burger-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    h1 {
+      text-align: center;
+      margin: 1rem auto 0 auto;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .burger-nav {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      transition: left 0.5s ease;
+      margin-left: 18%;
+
+      .burger-button {
+        position: absolute;
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      .burger-menu {
+        margin-top: 2rem;
+
+        li {
+          list-style: none;
+        }
+
+        .cities-menu {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .burger-nav a {
+      text-decoration: none;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .burger-nav a:hover {
+      color: #e16a52;
+    }
+  }
+}
+
+
 
 ul{
   display: flex;
