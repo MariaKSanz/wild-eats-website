@@ -22,9 +22,9 @@
     <script src="script.js" defer></script>
     <title>Wild eats</title>
   </head>
+  
   <body>
-
- <!-- Partie Joe Header -->
+    <!-- Partie Joe Header -->
     <header>
       <div class="hero">
         <h1 class="title_header">WILD EATS</h1>
@@ -59,57 +59,122 @@
         </nav>
       </div>
     </header>
+    <main>
 
-  
-    <main></main>
-
-    <footer>
-      <section id="newsletter-form">
-        <h4>Inscription à la newsletter</h4>
-        <form action="./" method="post">
-          <input
-            type="email"
-            name="user-email"
-            id="user-email"
-            required
-            placeholder="*Adresse e-mail"
-          />
-          <button id="submit-button" type="submit">S'inscrire</button>
-        </form>
+    
+    <section id="villes">
+      <ul>
+        <li>
+          <h2>Epinal</h2>
+          <img src="/img/PhotoMain/epinal.jpg" alt="epinal">
+        </li>
+        <li>
+          <h2>Nantes</h2>
+          <img src="/img/PhotoMain/nantes.jpg" alt="nantes">
+        </li>
+        <li>
+          <h2>Lyon</h2>
+          <img src="/img/PhotoMain/lyon.jpg" alt="lyon">
+        </li>
+      </ul>
       </section>
+    <section id="filler">
+      <h3 class="cards-name">Epinal</h3>
+        <label for="type of food"></label>
+            <select name="type of food" id="type-of-food">
+              <option value="filter">Filter</option>
+              <option value="Sushi">Sushi</option>
+              <option value="fast food">Fast Food</option>
+              <option value="Veggie">Veggie</option>
+            </select>
+    </section>
+    <section id="SecCard">
+    <div class="cards">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-img"></div>
+              </div>
+                <div class="card-body">
+                  <h2 class="nameResto">Fujiyama</h2>
+                  <h3 id="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-img1"></div>
+              </div>
+                <div class="card-body">
+                  <h2 class="nameResto">Snack Akdeniz</h2>
+                  <h3 id="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-img2"></div>
+              </div>
+                <div class="card-body">
+                  <h2 class="nameResto">Le Calife</h2>
+                  <h3 id="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section id="newsletter-form">
+      <h4>Inscription à la newsletter</h4>
+      <form action="./" method="post">
+        <input
+          type="email"
+          name="user-email"
+          id="user-email"
+          required
+          placeholder="*Adresse e-mail"
+        />
+        <button id="submit-button" type="submit">S'inscrire</button>
+      </form>
+    </section>
 
-      <section id="social-network-logos">
-        <h4>Suivez-nous!</h4>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com">
-              <i
-                class="lni lni-facebook-fill"
-                alt="facebook icon"
-                aria-label="facebook icon"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com">
-              <i
-                class="lni lni-instagram"
-                alt="instagram icon"
-                aria-label="instagram icon"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com">
-              <i
-                class="lni lni-tiktok-alt"
-                alt="tiktok icon"
-                aria-label="tiktok icon"
-              ></i>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </footer>
-  </body>
+    <section id="social-network-logos">
+      <h4>Suivez-nous!</h4>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com">
+            <i
+              class="lni lni-facebook-fill"
+              alt="facebook icon"
+              aria-label="facebook icon"
+            ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com">
+            <i
+              class="lni lni-instagram"
+              alt="instagram icon"
+              aria-label="instagram icon"
+            ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com">
+            <i
+              class="lni lni-tiktok-alt"
+              alt="tiktok icon"
+              aria-label="tiktok icon"
+            ></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+</body>
+
 </html>
