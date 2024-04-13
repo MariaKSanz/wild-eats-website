@@ -19,7 +19,17 @@
     <link rel="stylesheet" href="stylesfooter.css" />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "pDI9L6MXAn0wutgSv",
+            });
+        })();
+    </script>
     <script src="script.js" defer></script>
+    <script src="email.js" defer></script>
     <title>Wild eats</title>
   </head>
   
@@ -130,7 +140,7 @@
   <footer>
     <section id="newsletter-form">
       <h4>Inscription à la newsletter</h4>
-      <form action="./" method="post">
+      <form id="email-form" action="./" method="post">
         <input
           type="email"
           name="user-email"
