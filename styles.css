@@ -11,8 +11,7 @@ h3 {
   font-family: "concert one", sans-serif;
 }
 
-
-img{
+img {
   width: 60%;
   padding: auto;
 }
@@ -29,12 +28,10 @@ img{
     font-size: 4em;
     font-weight: 900;
     margin: 2rem;
-    font-family: concert one;
     padding-top: 4rem;
   }
 
   h2 {
-    font-family: concert one;
     color: white;
   }
 }
@@ -127,35 +124,45 @@ img{
     }
   }
 }
-
-
-
-ul{
-  display: flex;
-  text-align: center;
-  list-style: none;
+/* Kathalina part */
+#cities {
+  margin: 2rem 2rem;
+  ul {
+    /* background-color: #cbaf6a; */
+    display: flex;
+    text-align: center;
+    list-style: none;
+    li {
+      margin: 1rem;
+      h2 {
+        margin: 1rem 0;
+        text-transform: uppercase;
+      }
+      img {
+        width: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+  }
 }
-
-#villes{
-  padding-bottom: 5rem;
-}
-
-#filler{
+/* Oresti part */
+#filler {
   display: flex;
   margin: auto;
-  width: 80%
+  width: 80%;
 }
 
-#type-of-food{
+#type-of-food {
   background-color: #cbaf6a;
   color: white;
 }
-  
-.cards-name{
+
+.cards-name {
   padding-right: 1rem;
 }
 
-#SecCard{
+#SecCard {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -206,14 +213,19 @@ ul{
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 .card-body h2 {
   margin: 10px 0px;
 }
 
-@media screen and (max-width:768px){
-  
+/* Kathalina main part responsive */
+@media screen and (max-width: 768px) {
+  #cities {
+    margin: 1rem;
+    ul {
+      /* background-color: #cbaf6a; */
+      flex-direction: column;
+      margin-top: auto;
+    }
+  }
 }
-
-
