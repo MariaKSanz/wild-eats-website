@@ -58,7 +58,7 @@ for (let i = 0; i < restos.length; i++) {
 
 // UNe fois les 3 blocs de villes injectés (mis dans le DOM)
 // Faire la boucle sur les restos avec des if else pour injecter dans le bon bloc de ville
-=======
+
 const burgerBtn = document.getElementById("burgerBtn");
 console.log(burgerBtn);
 burgerBtn.addEventListener("click", () => {
