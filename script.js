@@ -1,5 +1,3 @@
-// // Création de variable pour la liste
-
 const title = document.querySelector(".title_header");
 
 //Ajout d'un événement listener "mouseover" pour changer la couleur du H1
@@ -14,10 +12,10 @@ title.addEventListener("mouseleave", function () {
   title.style.color = "white";
 });
 
-function villes() {
-  ul = document.getElementById("myUL");
-  li = ul.document.getElementByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-  }
-}
+const burgerBtn = document.getElementById("burgerBtn");
+console.log(burgerBtn);
+burgerBtn.addEventListener("click", () => {
+  console.log("click");
+  const ul = document.getElementById("burgerMenu");
+  ul.classList.toggle("block");
+});

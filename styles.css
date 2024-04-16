@@ -15,6 +15,7 @@ img {
   width: 60%;
   padding: auto;
 }
+
 .hero {
   background-image: url(img/hero.jpg);
   background-position: center;
@@ -28,10 +29,12 @@ img {
     font-size: 4em;
     font-weight: 900;
     margin: 2rem;
+    font-family: concert one;
     padding-top: 4rem;
   }
 
   h2 {
+    font-family: concert one;
     color: white;
   }
 }
@@ -108,6 +111,14 @@ img {
         transform: rotate(90deg);
         font-size: 1.5rem;
         font-weight: 900;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .block {
+        display: block;
       }
 
       .burger-menu {
