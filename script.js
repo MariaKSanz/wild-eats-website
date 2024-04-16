@@ -1,14 +1,17 @@
-// // Création de variable pour la liste
+const title = document.querySelector(".title_header");
 
-// const title = document.querySelector(".title_header");
+//Ajout d'un événement listener "mouseover" pour changer la couleur du H1
 
-// //Ajout d'un événement listener "mouseover" pour changer la couleur du H1
+title.addEventListener("mouseover", function () {
+  title.style.color = "#cbaf6a";
+});
 
-// title.addEventListener("mouseover", function () {
-//   title.style.color = "#E16A52";
-// });
+//Ajout d'un événement listener "mouseleave" pour revenir à la couleur originale du H1
 
-// //Ajout d'un événement listener "mouseleave" pour revenir à la couleur originale du H1
+title.addEventListener("mouseleave", function () {
+  title.style.color = "white";
+});
+
 
 // title.addEventListener("mouseleave", function () {
 //   title.style.color = "white";
@@ -55,3 +58,12 @@ for (let i = 0; i < restos.length; i++) {
 
 // UNe fois les 3 blocs de villes injectés (mis dans le DOM)
 // Faire la boucle sur les restos avec des if else pour injecter dans le bon bloc de ville
+=======
+const burgerBtn = document.getElementById("burgerBtn");
+console.log(burgerBtn);
+burgerBtn.addEventListener("click", () => {
+  console.log("click");
+  const ul = document.getElementById("burgerMenu");
+  ul.classList.toggle("block");
+});
+
