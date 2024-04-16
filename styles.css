@@ -113,6 +113,14 @@ img {
         font-weight: 900;
       }
 
+      .none {
+        display: none;
+      }
+
+      .block {
+        display: block;
+      }
+
       .burger-menu {
         margin-top: 2rem;
 
