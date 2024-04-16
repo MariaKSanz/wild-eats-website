@@ -6,8 +6,8 @@ window.onload = function () {
       // these IDs from the previous steps
       emailjs.sendForm("service_gc8ziot", "template_ezh1fr2", this).then(
         () => {
-					console.log("SUCCESS!");
-					alert("merci pour votre inscription")
+          console.log("SUCCESS!");
+          alert("merci pour votre inscription");
         },
         (error) => {
           console.log("FAILED...", error);
