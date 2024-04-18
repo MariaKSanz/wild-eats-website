@@ -13,5 +13,13 @@ window.onload = function () {
           console.log("FAILED...", error);
         }
       );
+       emailjs.sendForm("service_gc8ziot", "template_8j10c9f", this).then(
+         () => {
+           console.log("SUCCESS!");
+         },
+         (error) => {
+           console.log("FAILED...", error);
+         }
+       );
     });
 };
