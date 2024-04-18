@@ -12,22 +12,22 @@ title.addEventListener("mouseleave", function () {
   title.style.color = "white";
 });
 
-
+const burgerBtn = document.getElementById("burgerBtn");
+burgerBtn.addEventListener("click", () => {
+  const ul = document.getElementById("burgerMenu");
+  ul.classList.toggle("block");
+});
 // title.addEventListener("mouseleave", function () {
 //   title.style.color = "white";
 // });
 
 
 
-
 //ORESTI MAIN JS
-const SecCard = document.getElementById("section-epinal");
 
 const createCard = (resto) => {
-  const div = document.createElement('div');
-  div.classList.add("cards")
-
-  const template = `<div class="cards">
+  const template = `
+      <div class="cards">
         <div class="card">
           <div class="card-header">
             <div class="card-img" style="background-image: url('${resto.background}')"></div>
@@ -40,30 +40,75 @@ const createCard = (resto) => {
         </div>
       </div>
   `;
-  div.innerHTML = template;
   
-  return div ;
-
+  return template ;
 };
 
-for (let i = 0; i < restos.length; i++) {
-  SecCard.appendChild(createCard(restos[i]));
+
+const addRestoCards = (cityRestos) => {
+  const cards = [];
+  for (let i = 0; i < cityRestos.length; i++) {
+    cards.push(createCard(cityRestos[i]));
+    
+  }
+  return cards.join("");
 }
 
 
-// Première etape, injecter les 3 blocs de villes vides....
+const filterCards = (ville, filter) => {
+  // Etape 1: récupérer ma section
+  // doc.getElementById(`section-${ville}`)
+  // Vider la section innerHTML = "";
+  // creer un element div avec la class cards
+  // const div = document.createElement('div');
+  // div.classList.add("cards")
+  // faire une boucle sur les restos
+  // Dans la boucle, si le resto est de la ville && resto est du type filter
+  // alors div.innerHTML += createCard(restos[i])
+  // fin de la boucle
+  // section.appendChild(div)
+}
+
+const display = document.getElementById("display");
+
+const Cards2 = (city) => {
+  const cityResto = [];
+  for (let i = 0; i < restos.length; i++){
+    if(city === restos[i].city ){
+      cityResto.push(restos[i])
+    }  
+  }
 
 
-// Récupérer les 3 bloc distincts
+  const section = document.createElement('section')
+  section.setAttribute('id', city);
 
-// UNe fois les 3 blocs de villes injectés (mis dans le DOM)
-// Faire la boucle sur les restos avec des if else pour injecter dans le bon bloc de ville
+  const template =  `
+  <h3 class="cards-name">${city}</h3>
+  <label for="type of food"></label>
+  <select name="type of food" id="type-of-food" onchange="${city}, value">
+    <option value="Filter">Filter</option>
+    <option value="Sushi">Sushi</option>
+    <option value="Fast Food">Fast Food</option>
+    <option value="Veggie">Veggie</option>
+  </select>
+  <section id="section-${city}" class="city-section">
+  <!-- Injection des cartes par villes-->
+    ${addRestoCards(cityResto)}
+  </section>
+`;
 
-const burgerBtn = document.getElementById("burgerBtn");
-console.log(burgerBtn);
-burgerBtn.addEventListener("click", () => {
-  console.log("click");
-  const ul = document.getElementById("burgerMenu");
-  ul.classList.toggle("block");
-});
+section.innerHTML = template;
+return section ;
+};
+
+
+const villes = ["Epinal", "Nantes", "Lyon"]
+
+for (let i = 0; i < villes.length; i++){
+  const section = Cards2(villes[i])
+  display.appendChild(section);
+}
+
+
 
