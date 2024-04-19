@@ -178,7 +178,15 @@ main{
   background-color: whitesmoke;
 }
 
-#type-of-food {
+#select-Epinal {
+  background-color: #cbaf6a;
+  color: white;
+}
+#select-Nantes {
+  background-color: #cbaf6a;
+  color: white;
+}
+#select-Lyon {
   background-color: #cbaf6a;
   color: white;
 }
@@ -253,11 +261,22 @@ main{
   .cards-name{
     padding-left: 35%;
   }
-  #type-of-food{
-    width: 20%;
-
+  #section-Epinal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-}
+  #section-Nantes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #section-Lyon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ }
 
 /* Kathalina main part responsive */
 @media screen and (max-width: 768px) {
