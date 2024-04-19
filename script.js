@@ -61,18 +61,23 @@ const addRestoCards = (cityRestos) => {
   return cards.join("");
 };
 
-const filterCards = (ville, filter) => {
-  // Etape 1: récupérer ma section
-  // doc.getElementById(`section-${ville}`)
-  // Vider la section innerHTML = "";
-  // creer un element div avec la class cards
-  // const div = document.createElement('div');
-  // div.classList.add("cards")
-  // faire une boucle sur les restos
-  // Dans la boucle, si le resto est de la ville && resto est du type filter
-  // alors div.innerHTML += createCard(restos[i])
-  // fin de la boucle
-  // section.appendChild(div)
+const filterCards = (filter, ville) => {
+  const sectionVilles = document.getElementById(`section-${ville}`);
+
+  sectionVilles.innerHTML = "";
+  const div = document.createElement("div");
+  div.classList.add("cards");
+
+  for (let i = 0; i < restos.length; i++) {
+    if (
+      restos[i].city === ville &&
+      (restos[i].category === filter.value || filter.value === "")
+    ) {
+      div.innerHTML += createCard(restos[i]);
+    }
+  }
+
+  sectionVilles.appendChild(div);
 };
 
 const display = document.getElementById("display");
@@ -91,12 +96,12 @@ const Cards2 = (city) => {
   const template = `
   <h3 class="cards-name" id="section-title-${city}">${city}</h3>
   <label for="type of food"></label>
-  <select name="type of food" id="type-of-food" onchange="${city}, value">
-    <option value="Filter">Filter</option>
-    <option value="Sushi">Sushi</option>
-    <option value="Fast Food">Fast Food</option>
-    <option value="Veggie">Veggie</option>
-  </select>
+  <select name="select" id="select-${city}" onchange="filterCards(this, '${city}')">
+  <option value="">Filter</option>
+  <option value="Sushi">Sushi</option>
+  <option value="Burger">Fast Food</option>
+  <option value="Veggie">Veggie</option>
+</select>
   <section id="section-${city}" class="city-section">
   <!-- Injection des cartes par villes-->
     ${addRestoCards(cityResto)}
