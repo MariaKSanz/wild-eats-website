@@ -16,7 +16,7 @@ burgerBtn.addEventListener("click", () => {
 
 const cityNav = document.getElementById("city-nav");
 cityNav.addEventListener("change", (event) => {
-  const anchor = `#section-${event.target.value}`;
+  const anchor = `section-title-${event.target.value}`;
   const element_to_scroll_to = document.getElementById(anchor);
   element_to_scroll_to.scrollIntoView();
 });
@@ -89,7 +89,7 @@ const Cards2 = (city) => {
   section.setAttribute("id", city);
 
   const template = `
-  <h3 class="cards-name">${city}</h3>
+  <h3 class="cards-name" id="section-title-${city}">${city}</h3>
   <label for="type of food"></label>
   <select name="type of food" id="type-of-food" onchange="${city}, value">
     <option value="Filter">Filter</option>
@@ -97,7 +97,7 @@ const Cards2 = (city) => {
     <option value="Fast Food">Fast Food</option>
     <option value="Veggie">Veggie</option>
   </select>
-  <section id="#section-${city}" class="city-section">
+  <section id="section-${city}" class="city-section">
   <!-- Injection des cartes par villes-->
     ${addRestoCards(cityResto)}
   </section>
