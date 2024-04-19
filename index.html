@@ -19,14 +19,17 @@
     <link rel="stylesheet" href="stylesfooter.css" />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "pDI9L6MXAn0wutgSv",
-            });
-        })();
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "pDI9L6MXAn0wutgSv",
+        });
+      })();
     </script>
     <script src="email.js" defer></script>
     <title>Wild eats</title>
@@ -39,25 +42,37 @@
         <nav class="navigation">
           <ul>
             <label for="city-names">Sélectionner une ville :</label>
-            <select name="city-names" id="city-names">
-              <option value="epinal"><a href="#epinal">Epinal</a></option>
-              <option value="lyon"><a href="#lyon">Lyon</a></option>
-              <option value="nantes"><a href="#nantes">Nantes</a></option>
+            <select name="city-names" id="city-nav">
+              <option value="Epinal">
+                <a href="#section-Epinal">Epinal</a>
+              </option>
+              <option value="Lyon"><a href="#section-Lyon">Lyon</a></option>
+              <option value="Nantes">
+                <a href="#section-Nantes">Nantes</a>
+              </option>
             </select>
             <li><a href="#actualites">Actualités</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#a propos">A propos</a></li>
           </ul>
         </nav>
+        <!-- <nav class="burger-nav"> -->
         <nav id="myburger-nav" class="burger-nav">
-          <p id="burgerBtn"  class="burger-button">|||</p>
-          <ul id="burgerMenu" class="burger-menu none" >
+          <p id="burgerBtn" class="burger-button">|||</p>
+          <ul id="burgerMenu" class="burger-menu none">
             <li>
+              <!-- <select name="city-names" class="cities-menu">
+                <option value="Epinal"><a href="#epinal">Epinal</a></option>
+                <option value="Lyon"><a href="#lyon">Lyon</a></option>
+                <option value="Nantes">
+                  <a href="#section-Nantes">Nantes</a>
+                </option>
+              </select> -->
               <details class="cities-menu">
                 <summary>Les Villes</summary>
                 <a href="#epinal">Epinal</a>
                 <a href="#lyon">Lyon</a>
-                <a href="#nantes">Nantes</a>
+                <a href="#section-Nantes">Nantes</a>
               </details>
             </li>
             <li><a href="#actualites">Actualités</a></li>
@@ -72,15 +87,15 @@
         <ul>
           <li>
             <h2>Epinal</h2>
-            <img src="./img/PhotoMain/Epinal-photo.jpeg" alt="epinal">
+            <img src="./img/PhotoMain/Epinal-photo.jpeg" alt="epinal" />
           </li>
           <li>
             <h2>Nantes</h2>
-            <img src="./img/PhotoMain/nantes.jpg" alt="nantes">
+            <img src="./img/PhotoMain/nantes.jpg" alt="nantes" />
           </li>
           <li>
             <h2>Lyon</h2>
-            <img src="./img/PhotoMain/lyon.jpg" alt="lyon">
+            <img src="./img/PhotoMain/lyon.jpg" alt="lyon" />
           </li>
         </ul>
       </section>
@@ -135,7 +150,7 @@
         </ul>
       </section>
     </footer>
-    <script src="./assets/data/restoByCityes.js" ></script>
+    <script src="./assets/data/restoByCityes.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
