@@ -150,7 +150,7 @@ img {
     }
   }
 }
-/* Kathalina part */
+
 #cities {
   margin-bottom: 2rem;
   ul {
@@ -166,16 +166,17 @@ img {
       }
       img {
         width: 100%;
-        border-radius: 4px;
+        border-radius: 10px;
         object-fit: cover;
+        box-shadow: 2px 4px 8px #444343;
       }
     }
   }
 }
 /* Oresti part */
 
-main{
-  background-color: whitesmoke;
+main {
+  background-color: #f7f6e8;
 }
 
 #select-Epinal {
@@ -202,9 +203,6 @@ main{
   align-items: center;
   justify-content: space-evenly;
 }
-
-
-
 
 .cards {
   display: flex;
@@ -238,17 +236,17 @@ main{
   margin: 10px 0px;
 }
 
-.veggieburger{
+.veggieburger {
   width: 20%;
   padding-top: 0.5rem;
 }
 
-.fastfood{
+.fastfood {
   width: 20%;
   padding-top: 0.5rem;
 }
 
-.sushiicon{
+.sushiicon {
   width: 20%;
   padding-top: 0.5rem;
 }
@@ -256,26 +254,17 @@ main{
 @media screen and (max-width: 768px) {
   .city-section {
     margin: 1rem;
-    flex-direction: column; 
+    flex-direction: column;
   }
-  .cards-name{
+  .cards-name {
     padding-left: 35%;
   }
-  #section-Epinal{
-    display: flex;
+
+  .city-section {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  #section-Nantes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #section-Lyon{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
  }
 
 /* Kathalina main part responsive */
