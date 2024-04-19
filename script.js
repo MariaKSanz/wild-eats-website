@@ -16,7 +16,7 @@ burgerBtn.addEventListener("click", () => {
 
 const cityNav = document.getElementById("city-nav");
 cityNav.addEventListener("change", (event) => {
-  const anchor = `#section-${event.target.value}`;
+  const anchor = `section-title-${event.target.value}`;
   const element_to_scroll_to = document.getElementById(anchor);
   element_to_scroll_to.scrollIntoView();
 });
@@ -64,18 +64,21 @@ const addRestoCards = (cityRestos) => {
 const filterCards = (filter, ville) => {
   const sectionVilles = document.getElementById(`section-${ville}`);
 
-  sectionVilles.innerHTML = ""
-  const div = document.createElement('div');
+  sectionVilles.innerHTML = "";
+  const div = document.createElement("div");
   div.classList.add("cards");
-  
+
   for (let i = 0; i < restos.length; i++) {
-    if(restos[i].city === ville && (restos[i].category === filter.value || filter.value === "")){
-      div.innerHTML += createCard(restos[i])
+    if (
+      restos[i].city === ville &&
+      (restos[i].category === filter.value || filter.value === "")
+    ) {
+      div.innerHTML += createCard(restos[i]);
     }
-  }; 
+  }
 
   sectionVilles.appendChild(div);
-}
+};
 
 const display = document.getElementById("display");
 
@@ -87,23 +90,23 @@ const Cards2 = (city) => {
     }
   }
 
-  const section = document.createElement('section')
-  section.setAttribute('id', city);
+  const section = document.createElement("section");
+  section.setAttribute("id", city);
 
-  const template =  `
-    <h3 class="cards-name">${city}</h3>
-    <label for="type of food"></label>
-    <select name="select" id="select-${city}" onchange="filterCards(this, '${city}')">
-      <option value="">Filter</option>
-      <option value="Sushi">Sushi</option>
-      <option value="Burger">Fast Food</option>
-      <option value="Veggie">Veggie</option>
-    </select>
-    <section id="section-${city}" class="city-section">
-    <!-- Injection des cartes par villes-->
-      ${addRestoCards(cityResto)}
-    </section>
-  `;
+  const template = `
+  <h3 class="cards-name" id="section-title-${city}">${city}</h3>
+  <label for="type of food"></label>
+  <select name="select" id="select-${city}" onchange="filterCards(this, '${city}')">
+  <option value="">Filter</option>
+  <option value="Sushi">Sushi</option>
+  <option value="Burger">Fast Food</option>
+  <option value="Veggie">Veggie</option>
+</select>
+  <section id="section-${city}" class="city-section">
+  <!-- Injection des cartes par villes-->
+    ${addRestoCards(cityResto)}
+  </section>
+`;
 
   section.innerHTML = template;
   return section;
@@ -115,4 +118,3 @@ for (let i = 0; i < villes.length; i++) {
   const section = Cards2(villes[i]);
   display.appendChild(section);
 }
-
